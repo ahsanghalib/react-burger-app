@@ -15,7 +15,7 @@ class BuildControls extends Component {
 			<div className={classes.BuildControls}>
 				<p>
 					Current Price:{' '}
-					<strong>{this.props.price.toFixed(2)}</strong>
+					<strong>{this.props.price}</strong>
 				</p>
 				{controls.map(ctrl => {
 					return (
