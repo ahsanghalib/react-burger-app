@@ -6,8 +6,8 @@ class NavigationItems extends Component {
 	render() {
 		return (
 			<ul className={classes.NavigationItems}>
-				<NavigationItem links="/" active>Burger Builder</NavigationItem>
-				<NavigationItem links="/">Checkout</NavigationItem>
+				<NavigationItem links="/">Burger Builder</NavigationItem>
+				<NavigationItem links="/orders">Orders</NavigationItem>
 			</ul>
 		);
 	}
