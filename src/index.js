@@ -11,12 +11,14 @@ import App from './App';
 import './index.css';
 import thunk from 'redux-thunk';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const composeEnhancers = process.env.NODE_ENV
+	? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+	: null || compose;
 
 const rootReducer = combineReducers({
 	burgerBuilder: burgerBuilderReducer,
 	order: orderReducer,
-	auth: authReducer,
+	auth: authReducer
 });
 
 const store = createStore(
