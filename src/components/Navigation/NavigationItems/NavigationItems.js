@@ -7,7 +7,14 @@ class NavigationItems extends Component {
 		return (
 			<ul className={classes.NavigationItems}>
 				<NavigationItem links="/">Burger Builder</NavigationItem>
-				<NavigationItem links="/orders">Orders</NavigationItem>
+				{this.props.isAuthenticated ? (
+					<NavigationItem links="/orders">Orders</NavigationItem>
+				) : null}
+				{!this.props.isAuthenticated ? (
+					<NavigationItem links="/auth">Authenicate</NavigationItem>
+				) : (
+					<NavigationItem links="/logout">Logout</NavigationItem>
+				)}
 			</ul>
 		);
 	}

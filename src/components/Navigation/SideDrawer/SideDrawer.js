@@ -21,7 +21,7 @@ class SideDrawer extends Component {
 						<Logo />
 					</div>
 					<nav>
-						<NavigationItems />
+						<NavigationItems isAuthenticated={this.props.isAuth}/>
 					</nav>
 				</div>
 			</div>
